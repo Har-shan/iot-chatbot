@@ -1,0 +1,442 @@
+2025-07-18 20:16:31 [scrapy.addons] INFO: Enabled addons:
+[]
+2025-07-18 20:16:32 [scrapy.extensions.telnet] INFO: Telnet Password: 45538a3a1d083365
+2025-07-18 20:16:32 [py.warnings] WARNING: C:\Users\ratho\OneDrive\Desktop\Chatbots\iot-chatbot\iot-chatbot\venv\Lib\site-packages\scrapy\extensions\feedexport.py:455: ScrapyDeprecationWarning: The `FEED_URI` and `FEED_FORMAT` settings have been deprecated in favor of the `FEEDS` setting. Please see the `FEEDS` setting docs for more details
+  exporter = cls(crawler)
+
+2025-07-18 20:16:32 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2025-07-18 20:16:32 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'AUTOTHROTTLE_MAX_DELAY': 10,
+ 'AUTOTHROTTLE_START_DELAY': 2,
+ 'BOT_NAME': 'iotscraper',
+ 'DEPTH_LIMIT': 2,
+ 'DOWNLOAD_DELAY': 2,
+ 'LOG_FILE': 'spider_debug.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'iotscraper.spiders',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['iotscraper.spiders'],
+ 'USER_AGENT': 'Mozilla/5.0 (compatible; IoTScraper/1.0; '
+               '+https://example.com/bot)'}
+2025-07-18 20:16:32 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2025-07-18 20:16:32 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.start.StartSpiderMiddleware',
+ 'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2025-07-18 20:16:32 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2025-07-18 20:16:32 [scrapy.core.engine] INFO: Spider opened
+2025-07-18 20:16:32 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2025-07-18 20:16:32 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2025-07-18 20:17:32 [scrapy.extensions.logstats] INFO: Crawled 29 pages (at 29 pages/min), scraped 352 items (at 352 items/min)
+2025-07-18 20:18:32 [scrapy.extensions.logstats] INFO: Crawled 52 pages (at 23 pages/min), scraped 571 items (at 219 items/min)
+2025-07-18 20:19:30 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://www.iotm2mcouncil.org/?p=19397>: HTTP status code is not handled or not allowed
+2025-07-18 20:19:32 [scrapy.extensions.logstats] INFO: Crawled 76 pages (at 24 pages/min), scraped 704 items (at 133 items/min)
+2025-07-18 20:20:32 [scrapy.extensions.logstats] INFO: Crawled 97 pages (at 21 pages/min), scraped 871 items (at 167 items/min)
+2025-07-18 20:21:32 [scrapy.extensions.logstats] INFO: Crawled 122 pages (at 25 pages/min), scraped 1148 items (at 277 items/min)
+2025-07-18 20:22:32 [scrapy.extensions.logstats] INFO: Crawled 128 pages (at 6 pages/min), scraped 1160 items (at 12 items/min)
+2025-07-18 20:23:32 [scrapy.extensions.logstats] INFO: Crawled 149 pages (at 21 pages/min), scraped 1308 items (at 148 items/min)
+2025-07-18 20:23:59 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <404 https://www.iotm2mcouncil.org/membership/influencer-membership/>: HTTP status code is not handled or not allowed
+2025-07-18 20:24:32 [scrapy.extensions.logstats] INFO: Crawled 182 pages (at 33 pages/min), scraped 1674 items (at 366 items/min)
+2025-07-18 20:25:06 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/zigbee/>: HTTP status code is not handled or not allowed
+2025-07-18 20:25:16 [scrapy.core.scraper] ERROR: Error downloading <GET webcal://www.iot-now.com/event/commercial-uav-expo/?ical=1>
+Traceback (most recent call last):
+  File "C:\Users\ratho\OneDrive\Desktop\Chatbots\iot-chatbot\iot-chatbot\venv\Lib\site-packages\twisted\internet\defer.py", line 1853, in _inlineCallbacks
+    result = context.run(
+             ^^^^^^^^^^^^
+  File "C:\Users\ratho\OneDrive\Desktop\Chatbots\iot-chatbot\iot-chatbot\venv\Lib\site-packages\twisted\python\failure.py", line 467, in throwExceptionIntoGenerator
+    return g.throw(self.value.with_traceback(self.tb))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ratho\OneDrive\Desktop\Chatbots\iot-chatbot\iot-chatbot\venv\Lib\site-packages\scrapy\core\downloader\middleware.py", line 68, in process_request
+    return (yield download_func(request, spider))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ratho\OneDrive\Desktop\Chatbots\iot-chatbot\iot-chatbot\venv\Lib\site-packages\scrapy\utils\defer.py", line 120, in mustbe_deferred
+    result = f(*args, **kw)
+             ^^^^^^^^^^^^^^
+  File "C:\Users\ratho\OneDrive\Desktop\Chatbots\iot-chatbot\iot-chatbot\venv\Lib\site-packages\scrapy\core\downloader\handlers\__init__.py", line 100, in download_request
+    raise NotSupported(
+scrapy.exceptions.NotSupported: Unsupported URL scheme 'webcal': no handler available for that scheme
+2025-07-18 20:25:22 [scrapy.core.scraper] ERROR: Error downloading <GET webcal://www.iot-now.com/event/sido-lyon/?ical=1>
+Traceback (most recent call last):
+  File "C:\Users\ratho\OneDrive\Desktop\Chatbots\iot-chatbot\iot-chatbot\venv\Lib\site-packages\twisted\internet\defer.py", line 1853, in _inlineCallbacks
+    result = context.run(
+             ^^^^^^^^^^^^
+  File "C:\Users\ratho\OneDrive\Desktop\Chatbots\iot-chatbot\iot-chatbot\venv\Lib\site-packages\twisted\python\failure.py", line 467, in throwExceptionIntoGenerator
+    return g.throw(self.value.with_traceback(self.tb))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ratho\OneDrive\Desktop\Chatbots\iot-chatbot\iot-chatbot\venv\Lib\site-packages\scrapy\core\downloader\middleware.py", line 68, in process_request
+    return (yield download_func(request, spider))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ratho\OneDrive\Desktop\Chatbots\iot-chatbot\iot-chatbot\venv\Lib\site-packages\scrapy\utils\defer.py", line 120, in mustbe_deferred
+    result = f(*args, **kw)
+             ^^^^^^^^^^^^^^
+  File "C:\Users\ratho\OneDrive\Desktop\Chatbots\iot-chatbot\iot-chatbot\venv\Lib\site-packages\scrapy\core\downloader\handlers\__init__.py", line 100, in download_request
+    raise NotSupported(
+scrapy.exceptions.NotSupported: Unsupported URL scheme 'webcal': no handler available for that scheme
+2025-07-18 20:25:23 [scrapy.core.scraper] ERROR: Error downloading <GET webcal://www.iot-now.com/event/secutech-vietnam-2/?ical=1>
+Traceback (most recent call last):
+  File "C:\Users\ratho\OneDrive\Desktop\Chatbots\iot-chatbot\iot-chatbot\venv\Lib\site-packages\twisted\internet\defer.py", line 1853, in _inlineCallbacks
+    result = context.run(
+             ^^^^^^^^^^^^
+  File "C:\Users\ratho\OneDrive\Desktop\Chatbots\iot-chatbot\iot-chatbot\venv\Lib\site-packages\twisted\python\failure.py", line 467, in throwExceptionIntoGenerator
+    return g.throw(self.value.with_traceback(self.tb))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ratho\OneDrive\Desktop\Chatbots\iot-chatbot\iot-chatbot\venv\Lib\site-packages\scrapy\core\downloader\middleware.py", line 68, in process_request
+    return (yield download_func(request, spider))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ratho\OneDrive\Desktop\Chatbots\iot-chatbot\iot-chatbot\venv\Lib\site-packages\scrapy\utils\defer.py", line 120, in mustbe_deferred
+    result = f(*args, **kw)
+             ^^^^^^^^^^^^^^
+  File "C:\Users\ratho\OneDrive\Desktop\Chatbots\iot-chatbot\iot-chatbot\venv\Lib\site-packages\scrapy\core\downloader\handlers\__init__.py", line 100, in download_request
+    raise NotSupported(
+scrapy.exceptions.NotSupported: Unsupported URL scheme 'webcal': no handler available for that scheme
+2025-07-18 20:25:26 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/water-utilities/>: HTTP status code is not handled or not allowed
+2025-07-18 20:25:29 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/verizon-5g-connectivity/>: HTTP status code is not handled or not allowed
+2025-07-18 20:25:32 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/utility/>: HTTP status code is not handled or not allowed
+2025-07-18 20:25:32 [scrapy.extensions.logstats] INFO: Crawled 203 pages (at 21 pages/min), scraped 1809 items (at 135 items/min)
+2025-07-18 20:25:33 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/wind-turbines/>: HTTP status code is not handled or not allowed
+2025-07-18 20:25:36 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/wireless-connectivity/>: HTTP status code is not handled or not allowed
+2025-07-18 20:25:38 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/telit/>: HTTP status code is not handled or not allowed
+2025-07-18 20:25:41 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/smart-meters/>: HTTP status code is not handled or not allowed
+2025-07-18 20:25:43 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/smart-city/>: HTTP status code is not handled or not allowed
+2025-07-18 20:25:46 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/richardson/>: HTTP status code is not handled or not allowed
+2025-07-18 20:25:48 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/remote-monitoring/>: HTTP status code is not handled or not allowed
+2025-07-18 20:25:51 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/quectel/>: HTTP status code is not handled or not allowed
+2025-07-18 20:25:54 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/plug-and-play-2/>: HTTP status code is not handled or not allowed
+2025-07-18 20:25:59 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/nimbelink-skywire-cat-1-bis-embedded-modem/>: HTTP status code is not handled or not allowed
+2025-07-18 20:26:02 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/nimbelink/>: HTTP status code is not handled or not allowed
+2025-07-18 20:26:07 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/mouser/>: HTTP status code is not handled or not allowed
+2025-07-18 20:26:09 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/lte-networks/>: HTTP status code is not handled or not allowed
+2025-07-18 20:26:12 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/lte-modem/>: HTTP status code is not handled or not allowed
+2025-07-18 20:26:14 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/iot-connectivity/>: HTTP status code is not handled or not allowed
+2025-07-18 20:26:17 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/industrial-iot-iiot/>: HTTP status code is not handled or not allowed
+2025-07-18 20:26:20 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/industrial/>: HTTP status code is not handled or not allowed
+2025-07-18 20:26:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/healthcare/>: HTTP status code is not handled or not allowed
+2025-07-18 20:26:25 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/getwireless/>: HTTP status code is not handled or not allowed
+2025-07-18 20:26:27 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/digikey/>: HTTP status code is not handled or not allowed
+2025-07-18 20:26:29 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/certification/>: HTTP status code is not handled or not allowed
+2025-07-18 20:26:31 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/cellular-modules/>: HTTP status code is not handled or not allowed
+2025-07-18 20:26:32 [scrapy.extensions.logstats] INFO: Crawled 227 pages (at 24 pages/min), scraped 1860 items (at 51 items/min)
+2025-07-18 20:26:34 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/cellular-connectivity/>: HTTP status code is not handled or not allowed
+2025-07-18 20:26:36 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/cat-m-modules/>: HTTP status code is not handled or not allowed
+2025-07-18 20:26:38 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/cat-1bis/>: HTTP status code is not handled or not allowed
+2025-07-18 20:26:40 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/braemac/>: HTTP status code is not handled or not allowed
+2025-07-18 20:26:43 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/bom-cos/>: HTTP status code is not handled or not allowed
+2025-07-18 20:26:45 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/asset-trackers/>: HTTP status code is not handled or not allowed
+2025-07-18 20:26:46 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/arrow/>: HTTP status code is not handled or not allowed
+2025-07-18 20:26:49 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/airgain/>: HTTP status code is not handled or not allowed
+2025-07-18 20:26:52 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/3g-tehnologies/>: HTTP status code is not handled or not allowed
+2025-07-18 20:26:54 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/2g-technologies/>: HTTP status code is not handled or not allowed
+2025-07-18 20:27:06 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/wi-fi-7/>: HTTP status code is not handled or not allowed
+2025-07-18 20:27:09 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/wi-fi-6-aps/>: HTTP status code is not handled or not allowed
+2025-07-18 20:27:12 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/smart-locks/>: HTTP status code is not handled or not allowed
+2025-07-18 20:27:15 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/ruckus-r370/>: HTTP status code is not handled or not allowed
+2025-07-18 20:27:18 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/ruckus-r350e/>: HTTP status code is not handled or not allowed
+2025-07-18 20:27:19 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/ruckus-one/>: HTTP status code is not handled or not allowed
+2025-07-18 20:27:22 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/ruckus-networks/>: HTTP status code is not handled or not allowed
+2025-07-18 20:27:25 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/ruckus-h670-solution/>: HTTP status code is not handled or not allowed
+2025-07-18 20:27:27 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/role-based-access-control-rbac/>: HTTP status code is not handled or not allowed
+2025-07-18 20:27:30 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/power-over-ethernet-2/>: HTTP status code is not handled or not allowed
+2025-07-18 20:27:32 [scrapy.extensions.logstats] INFO: Crawled 252 pages (at 25 pages/min), scraped 1897 items (at 37 items/min)
+2025-07-18 20:27:32 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/lan-service/>: HTTP status code is not handled or not allowed
+2025-07-18 20:27:34 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/in-room-technology/>: HTTP status code is not handled or not allowed
+2025-07-18 20:27:36 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/hotels/>: HTTP status code is not handled or not allowed
+2025-07-18 20:27:39 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/hospitality-industry/>: HTTP status code is not handled or not allowed
+2025-07-18 20:27:41 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/environmental-sensors/>: HTTP status code is not handled or not allowed
+2025-07-18 20:27:43 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/digital-transformation/>: HTTP status code is not handled or not allowed
+2025-07-18 20:27:46 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/commscope/>: HTTP status code is not handled or not allowed
+2025-07-18 20:27:48 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/cloud-native-platform/>: HTTP status code is not handled or not allowed
+2025-07-18 20:27:52 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/ai-driven-network-assurance-systems/>: HTTP status code is not handled or not allowed
+2025-07-18 20:27:53 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/agentic-ai/>: HTTP status code is not handled or not allowed
+2025-07-18 20:28:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/water-tanks/>: HTTP status code is not handled or not allowed
+2025-07-18 20:28:07 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/water-management/>: HTTP status code is not handled or not allowed
+2025-07-18 20:28:09 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/vehicles/>: HTTP status code is not handled or not allowed
+2025-07-18 20:28:11 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/user-management/>: HTTP status code is not handled or not allowed
+2025-07-18 20:28:13 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/tank-monitoring/>: HTTP status code is not handled or not allowed
+2025-07-18 20:28:16 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/shipping-containers/>: HTTP status code is not handled or not allowed
+2025-07-18 20:28:18 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/satellite-enabled-iot/>: HTTP status code is not handled or not allowed
+2025-07-18 20:28:20 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/satellite-connected-solutions/>: HTTP status code is not handled or not allowed
+2025-07-18 20:28:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/satellite-connectivity/>: HTTP status code is not handled or not allowed
+2025-07-18 20:28:26 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/satellite/>: HTTP status code is not handled or not allowed
+2025-07-18 20:28:29 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/myriota/>: HTTP status code is not handled or not allowed
+2025-07-18 20:28:31 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/mining/>: HTTP status code is not handled or not allowed
+2025-07-18 20:28:32 [scrapy.extensions.logstats] INFO: Crawled 276 pages (at 24 pages/min), scraped 1929 items (at 32 items/min)
+2025-07-18 20:28:34 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/logistics/>: HTTP status code is not handled or not allowed
+2025-07-18 20:28:37 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/iot-sensors/>: HTTP status code is not handled or not allowed
+2025-07-18 20:28:39 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/iot-devices/>: HTTP status code is not handled or not allowed
+2025-07-18 20:28:42 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/government/>: HTTP status code is not handled or not allowed
+2025-07-18 20:28:45 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/direct-to-satellite-connectivity/>: HTTP status code is not handled or not allowed
+2025-07-18 20:28:47 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/cloud-infrastructure/>: HTTP status code is not handled or not allowed
+2025-07-18 20:28:50 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/blynk/>: HTTP status code is not handled or not allowed
+2025-07-18 20:28:52 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/agriculture/>: HTTP status code is not handled or not allowed
+2025-07-18 20:29:03 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/single-sku/>: HTTP status code is not handled or not allowed
+2025-07-18 20:29:06 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/sim-orchestrations-platform/>: HTTP status code is not handled or not allowed
+2025-07-18 20:29:08 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/platform-as-a-service/>: HTTP status code is not handled or not allowed
+2025-07-18 20:29:11 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/original-equipment-manufacturers-oems/>: HTTP status code is not handled or not allowed
+2025-07-18 20:29:13 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/iot-platform/>: HTTP status code is not handled or not allowed
+2025-07-18 20:29:15 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/iot-markets/>: HTTP status code is not handled or not allowed
+2025-07-18 20:29:17 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/iot-device-fleets/>: HTTP status code is not handled or not allowed
+2025-07-18 20:29:20 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/iot-connectivity-management/>: HTTP status code is not handled or not allowed
+2025-07-18 20:29:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/iot-accelerator/>: HTTP status code is not handled or not allowed
+2025-07-18 20:29:26 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/fleet/>: HTTP status code is not handled or not allowed
+2025-07-18 20:29:29 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/esim-enabled-devices/>: HTTP status code is not handled or not allowed
+2025-07-18 20:29:31 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/esim/>: HTTP status code is not handled or not allowed
+2025-07-18 20:29:32 [scrapy.extensions.logstats] INFO: Crawled 299 pages (at 23 pages/min), scraped 1956 items (at 27 items/min)
+2025-07-18 20:29:33 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/ericsson/>: HTTP status code is not handled or not allowed
+2025-07-18 20:29:36 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/device-traffic/>: HTTP status code is not handled or not allowed
+2025-07-18 20:29:38 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/cybersecurity/>: HTTP status code is not handled or not allowed
+2025-07-18 20:29:41 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/connected-solutions/>: HTTP status code is not handled or not allowed
+2025-07-18 20:29:43 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/connected-device/>: HTTP status code is not handled or not allowed
+2025-07-18 20:29:46 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/billing-infrastructure/>: HTTP status code is not handled or not allowed
+2025-07-18 20:29:49 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/berg-insight/>: HTTP status code is not handled or not allowed
+2025-07-18 20:29:52 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/automotive-2/>: HTTP status code is not handled or not allowed
+2025-07-18 20:29:55 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/apis/>: HTTP status code is not handled or not allowed
+2025-07-18 20:29:57 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/aeris-iot-watchtower/>: HTTP status code is not handled or not allowed
+2025-07-18 20:30:00 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/aeris/>: HTTP status code is not handled or not allowed
+2025-07-18 20:30:14 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/utility-management-platforms/>: HTTP status code is not handled or not allowed
+2025-07-18 20:30:17 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/utility-eecosystem/>: HTTP status code is not handled or not allowed
+2025-07-18 20:30:20 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/smart-meter/>: HTTP status code is not handled or not allowed
+2025-07-18 20:30:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/security/>: HTTP status code is not handled or not allowed
+2025-07-18 20:30:26 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/remote-connectivity/>: HTTP status code is not handled or not allowed
+2025-07-18 20:30:28 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/real-time-connectivity/>: HTTP status code is not handled or not allowed
+2025-07-18 20:30:31 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/operational-visibility/>: HTTP status code is not handled or not allowed
+2025-07-18 20:30:32 [scrapy.extensions.logstats] INFO: Crawled 321 pages (at 22 pages/min), scraped 2022 items (at 66 items/min)
+2025-07-18 20:30:33 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/iot-solutions/>: HTTP status code is not handled or not allowed
+2025-07-18 20:30:36 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/industrial-iot/>: HTTP status code is not handled or not allowed
+2025-07-18 20:30:38 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/honeywell-smart-meters/>: HTTP status code is not handled or not allowed
+2025-07-18 20:30:40 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/honeywell-forge-performance/>: HTTP status code is not handled or not allowed
+2025-07-18 20:30:42 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/honeywell/>: HTTP status code is not handled or not allowed
+2025-07-18 20:30:45 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/health/>: HTTP status code is not handled or not allowed
+2025-07-18 20:30:48 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/grid-conditions/>: HTTP status code is not handled or not allowed
+2025-07-18 20:30:50 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/equipment-performance/>: HTTP status code is not handled or not allowed
+2025-07-18 20:30:53 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/energy-management-2/>: HTTP status code is not handled or not allowed
+2025-07-18 20:30:56 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/energy-usage/>: HTTP status code is not handled or not allowed
+2025-07-18 20:30:58 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/energy-resources/>: HTTP status code is not handled or not allowed
+2025-07-18 20:31:01 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/energy-insights/>: HTTP status code is not handled or not allowed
+2025-07-18 20:31:03 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/customer-satisfaction/>: HTTP status code is not handled or not allowed
+2025-07-18 20:31:06 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/connectivity/>: HTTP status code is not handled or not allowed
+2025-07-18 20:31:09 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/connected-smart-meters/>: HTTP status code is not handled or not allowed
+2025-07-18 20:31:11 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/cloud/>: HTTP status code is not handled or not allowed
+2025-07-18 20:31:14 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/cellular-network-2/>: HTTP status code is not handled or not allowed
+2025-07-18 20:31:16 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/cellular-connected-smart-meters/>: HTTP status code is not handled or not allowed
+2025-07-18 20:31:18 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/artificial-intelligence-ai/>: HTTP status code is not handled or not allowed
+2025-07-18 20:31:21 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/5g-connectivity/>: HTTP status code is not handled or not allowed
+2025-07-18 20:31:22 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/5g/>: HTTP status code is not handled or not allowed
+2025-07-18 20:31:32 [scrapy.extensions.logstats] INFO: Crawled 346 pages (at 25 pages/min), scraped 2053 items (at 31 items/min)
+2025-07-18 20:31:36 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/water/>: HTTP status code is not handled or not allowed
+2025-07-18 20:31:38 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/utilities/>: HTTP status code is not handled or not allowed
+2025-07-18 20:31:40 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/upfront-costs/>: HTTP status code is not handled or not allowed
+2025-07-18 20:31:43 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/united-states/>: HTTP status code is not handled or not allowed
+2025-07-18 20:31:46 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/sustainability/>: HTTP status code is not handled or not allowed
+2025-07-18 20:31:49 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/smart-metering/>: HTTP status code is not handled or not allowed
+2025-07-18 20:31:51 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/sla-demands/>: HTTP status code is not handled or not allowed
+2025-07-18 20:31:53 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/non-revenue-water/>: HTTP status code is not handled or not allowed
+2025-07-18 20:31:55 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/netmore-group/>: HTTP status code is not handled or not allowed
+2025-07-18 20:31:57 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/metering-as-a-service/>: HTTP status code is not handled or not allowed
+2025-07-18 20:32:00 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/maas-solutions/>: HTTP status code is not handled or not allowed
+2025-07-18 20:32:03 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/iot-networks/>: HTTP status code is not handled or not allowed
+2025-07-18 20:32:06 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/internet-of-things-iot-2/>: HTTP status code is not handled or not allowed
+2025-07-18 20:32:08 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/gas-utilities/>: HTTP status code is not handled or not allowed
+2025-07-18 20:32:10 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/gas/>: HTTP status code is not handled or not allowed
+2025-07-18 20:32:13 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/europe/>: HTTP status code is not handled or not allowed
+2025-07-18 20:32:15 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/communicating-meter/>: HTTP status code is not handled or not allowed
+2025-07-18 20:32:18 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/cash-flow/>: HTTP status code is not handled or not allowed
+2025-07-18 20:32:21 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/capex/>: HTTP status code is not handled or not allowed
+2025-07-18 20:32:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/ami-solution/>: HTTP status code is not handled or not allowed
+2025-07-18 20:32:26 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/ami-projects/>: HTTP status code is not handled or not allowed
+2025-07-18 20:32:28 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/advanced-metering-infrastructure/>: HTTP status code is not handled or not allowed
+2025-07-18 20:32:32 [scrapy.extensions.logstats] INFO: Crawled 370 pages (at 24 pages/min), scraped 2071 items (at 18 items/min)
+2025-07-18 20:33:32 [scrapy.extensions.logstats] INFO: Crawled 392 pages (at 22 pages/min), scraped 2195 items (at 124 items/min)
+2025-07-18 20:33:37 [scrapy.core.scraper] ERROR: Error downloading <GET webcal://www.iot-now.com/event/ai-infra-summit-2025/?ical=1>
+Traceback (most recent call last):
+  File "C:\Users\ratho\OneDrive\Desktop\Chatbots\iot-chatbot\iot-chatbot\venv\Lib\site-packages\twisted\internet\defer.py", line 1853, in _inlineCallbacks
+    result = context.run(
+             ^^^^^^^^^^^^
+  File "C:\Users\ratho\OneDrive\Desktop\Chatbots\iot-chatbot\iot-chatbot\venv\Lib\site-packages\twisted\python\failure.py", line 467, in throwExceptionIntoGenerator
+    return g.throw(self.value.with_traceback(self.tb))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ratho\OneDrive\Desktop\Chatbots\iot-chatbot\iot-chatbot\venv\Lib\site-packages\scrapy\core\downloader\middleware.py", line 68, in process_request
+    return (yield download_func(request, spider))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ratho\OneDrive\Desktop\Chatbots\iot-chatbot\iot-chatbot\venv\Lib\site-packages\scrapy\utils\defer.py", line 120, in mustbe_deferred
+    result = f(*args, **kw)
+             ^^^^^^^^^^^^^^
+  File "C:\Users\ratho\OneDrive\Desktop\Chatbots\iot-chatbot\iot-chatbot\venv\Lib\site-packages\scrapy\core\downloader\handlers\__init__.py", line 100, in download_request
+    raise NotSupported(
+scrapy.exceptions.NotSupported: Unsupported URL scheme 'webcal': no handler available for that scheme
+2025-07-18 20:33:47 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/z-wave/>: HTTP status code is not handled or not allowed
+2025-07-18 20:33:55 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/technology/>: HTTP status code is not handled or not allowed
+2025-07-18 20:34:02 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/smart-thermostats/>: HTTP status code is not handled or not allowed
+2025-07-18 20:34:10 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/smart-lighting/>: HTTP status code is not handled or not allowed
+2025-07-18 20:34:16 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/smart-home/>: HTTP status code is not handled or not allowed
+2025-07-18 20:34:21 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/research/>: HTTP status code is not handled or not allowed
+2025-07-18 20:34:27 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/renewable-energy/>: HTTP status code is not handled or not allowed
+2025-07-18 20:34:32 [scrapy.extensions.logstats] INFO: Crawled 402 pages (at 10 pages/min), scraped 2216 items (at 21 items/min)
+2025-07-18 20:34:34 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/monitoring/>: HTTP status code is not handled or not allowed
+2025-07-18 20:34:41 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/ml/>: HTTP status code is not handled or not allowed
+2025-07-18 20:34:46 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/magda-dabrowska/>: HTTP status code is not handled or not allowed
+2025-07-18 20:34:53 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/machine-learning/>: HTTP status code is not handled or not allowed
+2025-07-18 20:34:59 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/led-technology/>: HTTP status code is not handled or not allowed
+2025-07-18 20:35:06 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/iot/>: HTTP status code is not handled or not allowed
+2025-07-18 20:35:14 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/internet-of-things-iot/>: HTTP status code is not handled or not allowed
+2025-07-18 20:35:20 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/hvac/>: HTTP status code is not handled or not allowed
+2025-07-18 20:35:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/environment/>: HTTP status code is not handled or not allowed
+2025-07-18 20:35:31 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/efficiency/>: HTTP status code is not handled or not allowed
+2025-07-18 20:35:32 [scrapy.extensions.logstats] INFO: Crawled 412 pages (at 10 pages/min), scraped 2216 items (at 0 items/min)
+2025-07-18 20:35:36 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/data/>: HTTP status code is not handled or not allowed
+2025-07-18 20:35:44 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/control/>: HTTP status code is not handled or not allowed
+2025-07-18 20:35:50 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/automation/>: HTTP status code is not handled or not allowed
+2025-07-18 20:35:57 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/artificial-intelligence/>: HTTP status code is not handled or not allowed
+2025-07-18 20:36:05 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/applianses/>: HTTP status code is not handled or not allowed
+2025-07-18 20:36:10 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/aiml/>: HTTP status code is not handled or not allowed
+2025-07-18 20:36:18 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/ai/>: HTTP status code is not handled or not allowed
+2025-07-18 20:36:32 [scrapy.extensions.logstats] INFO: Crawled 421 pages (at 9 pages/min), scraped 2223 items (at 7 items/min)
+2025-07-18 20:37:32 [scrapy.extensions.logstats] INFO: Crawled 441 pages (at 20 pages/min), scraped 2526 items (at 303 items/min)
+2025-07-18 20:37:39 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/west-virginia/>: HTTP status code is not handled or not allowed
+2025-07-18 20:37:42 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/transport/>: HTTP status code is not handled or not allowed
+2025-07-18 20:37:46 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/tracking-solution/>: HTTP status code is not handled or not allowed
+2025-07-18 20:37:48 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/singtel/>: HTTP status code is not handled or not allowed
+2025-07-18 20:37:51 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/xdigit/>: HTTP status code is not handled or not allowed
+2025-07-18 20:37:57 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/transportation/>: HTTP status code is not handled or not allowed
+2025-07-18 20:37:59 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/samsung-electronics/>: HTTP status code is not handled or not allowed
+2025-07-18 20:38:00 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/telefonica/>: HTTP status code is not handled or not allowed
+2025-07-18 20:38:03 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/smart-wearables/>: HTTP status code is not handled or not allowed
+2025-07-18 20:38:06 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/modules/>: HTTP status code is not handled or not allowed
+2025-07-18 20:38:10 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/software-as-a-service/>: HTTP status code is not handled or not allowed
+2025-07-18 20:38:14 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/chatgpt/>: HTTP status code is not handled or not allowed
+2025-07-18 20:38:20 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/telecoms/>: HTTP status code is not handled or not allowed
+2025-07-18 20:38:23 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/stl-partners/>: HTTP status code is not handled or not allowed
+2025-07-18 20:38:27 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/telecommunications-industry/>: HTTP status code is not handled or not allowed
+2025-07-18 20:38:30 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/physical-sim/>: HTTP status code is not handled or not allowed
+2025-07-18 20:38:32 [scrapy.extensions.logstats] INFO: Crawled 460 pages (at 19 pages/min), scraped 2566 items (at 40 items/min)
+2025-07-18 20:38:33 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/network/>: HTTP status code is not handled or not allowed
+2025-07-18 20:38:37 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/mvno/>: HTTP status code is not handled or not allowed
+2025-07-18 20:38:42 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/mobile-virtual-network-operator/>: HTTP status code is not handled or not allowed
+2025-07-18 20:38:44 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/lifecycle-software/>: HTTP status code is not handled or not allowed
+2025-07-18 20:38:46 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/connected-devices/>: HTTP status code is not handled or not allowed
+2025-07-18 20:38:48 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/business-support-system/>: HTTP status code is not handled or not allowed
+2025-07-18 20:38:51 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/bss/>: HTTP status code is not handled or not allowed
+2025-07-18 20:39:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/social-media/>: HTTP status code is not handled or not allowed
+2025-07-18 20:39:07 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/networks/>: HTTP status code is not handled or not allowed
+2025-07-18 20:39:09 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/magazine/>: HTTP status code is not handled or not allowed
+2025-07-18 20:39:12 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/developer-engagement/>: HTTP status code is not handled or not allowed
+2025-07-18 20:39:14 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/csps/>: HTTP status code is not handled or not allowed
+2025-07-18 20:39:17 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/communications-service-providers/>: HTTP status code is not handled or not allowed
+2025-07-18 20:39:19 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/b2b2x-business-models/>: HTTP status code is not handled or not allowed
+2025-07-18 20:39:21 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/application-programme-interfaces/>: HTTP status code is not handled or not allowed
+2025-07-18 20:39:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/api-monetisation/>: HTTP status code is not handled or not allowed
+2025-07-18 20:39:27 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/5g-networks/>: HTTP status code is not handled or not allowed
+2025-07-18 20:39:29 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/4g-services/>: HTTP status code is not handled or not allowed
+2025-07-18 20:39:32 [scrapy.extensions.logstats] INFO: Crawled 483 pages (at 23 pages/min), scraped 2580 items (at 14 items/min)
+2025-07-18 20:39:35 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/6g/>: HTTP status code is not handled or not allowed
+2025-07-18 20:39:40 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/smart-retail/>: HTTP status code is not handled or not allowed
+2025-07-18 20:39:42 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/smart-devices/>: HTTP status code is not handled or not allowed
+2025-07-18 20:39:45 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/robotics/>: HTTP status code is not handled or not allowed
+2025-07-18 20:39:47 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/intelligent-transformation/>: HTTP status code is not handled or not allowed
+2025-07-18 20:39:49 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/fibocom-ai-stack/>: HTTP status code is not handled or not allowed
+2025-07-18 20:39:51 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/fibocom/>: HTTP status code is not handled or not allowed
+2025-07-18 20:39:54 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/autonomous-vehicles/>: HTTP status code is not handled or not allowed
+2025-07-18 20:39:56 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/ai-tools/>: HTTP status code is not handled or not allowed
+2025-07-18 20:40:09 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/telco/>: HTTP status code is not handled or not allowed
+2025-07-18 20:40:12 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/tallence/>: HTTP status code is not handled or not allowed
+2025-07-18 20:40:16 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/network-as-a-service-2/>: HTTP status code is not handled or not allowed
+2025-07-18 20:40:19 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/mwc/>: HTTP status code is not handled or not allowed
+2025-07-18 20:40:22 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/frank-moll/>: HTTP status code is not handled or not allowed
+2025-07-18 20:40:25 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/dtw-ignite-2025/>: HTTP status code is not handled or not allowed
+2025-07-18 20:40:28 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/digitalisation/>: HTTP status code is not handled or not allowed
+2025-07-18 20:40:31 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/api-exposure/>: HTTP status code is not handled or not allowed
+2025-07-18 20:40:32 [scrapy.extensions.logstats] INFO: Crawled 505 pages (at 22 pages/min), scraped 2684 items (at 104 items/min)
+2025-07-18 20:40:38 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/orbcomm/>: HTTP status code is not handled or not allowed
+2025-07-18 20:40:41 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/industrial-internet-of-things-iiot/>: HTTP status code is not handled or not allowed
+2025-07-18 20:40:45 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/industrial-ai/>: HTTP status code is not handled or not allowed
+2025-07-18 20:40:49 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/harman-digital-transformation-solutions/>: HTTP status code is not handled or not allowed
+2025-07-18 20:40:54 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/harman/>: HTTP status code is not handled or not allowed
+2025-07-18 20:40:57 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/enterprise-markets/>: HTTP status code is not handled or not allowed
+2025-07-18 20:40:59 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/dataops/>: HTTP status code is not handled or not allowed
+2025-07-18 20:41:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/data-science/>: HTTP status code is not handled or not allowed
+2025-07-18 20:41:07 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/data-modernisation/>: HTTP status code is not handled or not allowed
+2025-07-18 20:41:11 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/bangalore/>: HTTP status code is not handled or not allowed
+2025-07-18 20:41:16 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/asset-management/>: HTTP status code is not handled or not allowed
+2025-07-18 20:41:20 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/asset-intelligence-product-portfolio/>: HTTP status code is not handled or not allowed
+2025-07-18 20:41:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/analytics-services/>: HTTP status code is not handled or not allowed
+2025-07-18 20:41:28 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/agentic-ai-2/>: HTTP status code is not handled or not allowed
+2025-07-18 20:41:32 [scrapy.extensions.logstats] INFO: Crawled 520 pages (at 15 pages/min), scraped 2687 items (at 3 items/min)
+2025-07-18 20:41:33 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/advanced-bi/>: HTTP status code is not handled or not allowed
+2025-07-18 20:41:42 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/wisekey-international-holding/>: HTTP status code is not handled or not allowed
+2025-07-18 20:41:45 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/wafer-yield/>: HTTP status code is not handled or not allowed
+2025-07-18 20:41:47 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/ultra-small-geometries/>: HTTP status code is not handled or not allowed
+2025-07-18 20:41:50 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/sub-7nm-nodes/>: HTTP status code is not handled or not allowed
+2025-07-18 20:41:54 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/semiconductor-wafer-yields/>: HTTP status code is not handled or not allowed
+2025-07-18 20:41:55 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/semiconductor/>: HTTP status code is not handled or not allowed
+2025-07-18 20:41:59 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/sealsq-quantum-labs/>: HTTP status code is not handled or not allowed
+2025-07-18 20:42:01 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/sealsq-corp/>: HTTP status code is not handled or not allowed
+2025-07-18 20:42:04 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/quantum-loon-chip/>: HTTP status code is not handled or not allowed
+2025-07-18 20:42:07 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/quantum-computing/>: HTTP status code is not handled or not allowed
+2025-07-18 20:42:10 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/qs7001/>: HTTP status code is not handled or not allowed
+2025-07-18 20:42:12 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/pde-solutions/>: HTTP status code is not handled or not allowed
+2025-07-18 20:42:15 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/partial-differential-equations/>: HTTP status code is not handled or not allowed
+2025-07-18 20:42:19 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/moores-law/>: HTTP status code is not handled or not allowed
+2025-07-18 20:42:21 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/ir-drop-issues/>: HTTP status code is not handled or not allowed
+2025-07-18 20:42:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/iot-applications/>: HTTP status code is not handled or not allowed
+2025-07-18 20:42:27 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/ibm/>: HTTP status code is not handled or not allowed
+2025-07-18 20:42:29 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/colibritd/>: HTTP status code is not handled or not allowed
+2025-07-18 20:42:32 [scrapy.extensions.logstats] INFO: Crawled 541 pages (at 21 pages/min), scraped 2700 items (at 13 items/min)
+2025-07-18 20:42:38 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/sim-platforms/>: HTTP status code is not handled or not allowed
+2025-07-18 20:42:41 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/sgp-32/>: HTTP status code is not handled or not allowed
+2025-07-18 20:42:44 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/safety/>: HTTP status code is not handled or not allowed
+2025-07-18 20:42:48 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/retail/>: HTTP status code is not handled or not allowed
+2025-07-18 20:42:52 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/paragon/>: HTTP status code is not handled or not allowed
+2025-07-18 20:42:56 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/network-switching/>: HTTP status code is not handled or not allowed
+2025-07-18 20:42:59 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/network-infrastructure/>: HTTP status code is not handled or not allowed
+2025-07-18 20:43:03 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/multi-imsi-sim-technology/>: HTTP status code is not handled or not allowed
+2025-07-18 20:43:05 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/multi-domestic-connectivity/>: HTTP status code is not handled or not allowed
+2025-07-18 20:43:08 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/mobile-network-operators-mnos/>: HTTP status code is not handled or not allowed
+2025-07-18 20:43:11 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/mno-platforms/>: HTTP status code is not handled or not allowed
+2025-07-18 20:43:15 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/memorandum-of-understanding/>: HTTP status code is not handled or not allowed
+2025-07-18 20:43:17 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/lenovo-connect/>: HTTP status code is not handled or not allowed
+2025-07-18 20:43:21 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/iot-transformation/>: HTTP status code is not handled or not allowed
+2025-07-18 20:43:24 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/iot-industry-cooperation/>: HTTP status code is not handled or not allowed
+2025-07-18 20:43:27 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/iot-deployments/>: HTTP status code is not handled or not allowed
+2025-07-18 20:43:31 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/industrial-automation/>: HTTP status code is not handled or not allowed
+2025-07-18 20:43:32 [scrapy.extensions.logstats] INFO: Crawled 560 pages (at 19 pages/min), scraped 2720 items (at 20 items/min)
+2025-07-18 20:43:34 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/flolive/>: HTTP status code is not handled or not allowed
+2025-07-18 20:43:38 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/euicc/>: HTTP status code is not handled or not allowed
+2025-07-18 20:43:42 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/esim-iot-standards/>: HTTP status code is not handled or not allowed
+2025-07-18 20:43:45 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/edge-computing/>: HTTP status code is not handled or not allowed
+2025-07-18 20:43:48 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/connected-vehicles/>: HTTP status code is not handled or not allowed
+2025-07-18 20:43:51 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/china/>: HTTP status code is not handled or not allowed
+2025-07-18 20:43:55 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/billing-systems/>: HTTP status code is not handled or not allowed
+2025-07-18 20:43:58 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/autonomous-driving/>: HTTP status code is not handled or not allowed
+2025-07-18 20:44:02 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/automotive-oems/>: HTTP status code is not handled or not allowed
+2025-07-18 20:44:06 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/asia-pacific-2/>: HTTP status code is not handled or not allowed
+2025-07-18 20:44:08 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/5g-redcap/>: HTTP status code is not handled or not allowed
+2025-07-18 20:44:26 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2025-07-18 20:44:26 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2025-07-18 20:44:27 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/transport-logistics/>: HTTP status code is not handled or not allowed
+2025-07-18 20:44:29 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/techled/>: HTTP status code is not handled or not allowed
+2025-07-18 20:44:32 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/smart-utilities-tag/>: HTTP status code is not handled or not allowed
+2025-07-18 20:44:32 [scrapy.extensions.logstats] INFO: Crawled 580 pages (at 20 pages/min), scraped 2775 items (at 55 items/min)
+2025-07-18 20:44:34 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/smart-cities/>: HTTP status code is not handled or not allowed
+2025-07-18 20:44:37 [scrapy.spidermiddlewares.httperror] INFO: Ignoring response <403 https://www.iot-now.com/tag/smart-buildings/>: HTTP status code is not handled or not allowed
+2025-07-18 20:44:39 [scrapy.crawler] INFO: Received SIGINT twice, forcing unclean shutdown

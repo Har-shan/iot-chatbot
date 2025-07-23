@@ -1,0 +1,19 @@
+# Core dependencies
+flask
+flask-cors
+chromadb
+sentence-transformers
+requests
+scrapy
+certifi
+tqdm
+numpy
+gunicorn
+scikit-learn
+pymongo
+beautifulsoup4
+hf_xet
+python-dotenv
+
+
+

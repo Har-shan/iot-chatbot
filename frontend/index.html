@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IoT Intelligence Hub</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+      --glass-bg: rgba(255, 255, 255, 0.1);
+      --glass-border: rgba(255, 255, 255, 0.2);
+      --text-primary: #1a1a1a;
+      --text-secondary: #6b7280;
+      --shadow-lg: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      --shadow-xl: 0 35px 60px -12px rgba(0, 0, 0, 0.3);
+      --body-colour: white;
+    }
+
+    body { 
+      font-family: 'Inter', sans-serif;
+      /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: 
+        radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.2) 0%, transparent 50%);
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .container {
+      background: var(--glass-bg);
+      backdrop-filter: blur(20px);
+      border: 1px solid var(--glass-border);
+      border-radius: 24px;
+      box-shadow: var(--shadow-xl);
+      width: 100%;
+      max-width: 1000px;
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    }
+
+    .header {
+      background: var(--accent-gradient);
+      color: white;
+      padding: 30px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 100%;
+      height: 50%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+      animation: rotate 20s linear infinite;
+    }
+
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .header-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .header h1 {
+      font-size: 2.5em;
+      font-weight: 700;
+      margin-bottom: 8px;
+      text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      letter-spacing: -0.02em;
+    }
+
+    .header p {
+      opacity: 0.9;
+      font-size: 1.1em;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+
+    .status-text {
+      font-size: 0.9em;
+      font-weight: 500;
+    }
+
+    #chat-box { 
+      flex: 1;
+      padding: 30px;
+      overflow-y: auto;
+      background: #f4f7f3c1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      scroll-behavior: smooth;
+    }
+
+    #chat-box::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    #chat-box::-webkit-scrollbar-track {
+      background: rgba(255,255,255,0.1);
+      border-radius: 3px;
+    }
+
+    #chat-box::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.3);
+      border-radius: 3px;
+    }
+
+    #chat-box::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.5);
+    }
+
+    .message { 
+      padding: 20px 24px;
+      border-radius: 20px;
+      max-width: 75%;
+      word-wrap: break-word;
+      line-height: 1.6;
+      font-weight: 400;
+      position: relative;
+      animation: messageSlide 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    @keyframes messageSlide {
+      from { 
+        opacity: 0; 
+        transform: translateY(20px) scale(0.95); 
+      }
+      to { 
+        opacity: 1; 
+        transform: translateY(0) scale(1); 
+      }
+    }
+
+    .message strong {
+      font-weight: 600;
+      margin-bottom: 8px;
+      display: block;
+      font-size: 0.9em;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .user { 
+      background: var(--primary-gradient);
+      color: white;
+      align-self: flex-end;
+      margin-left: auto;
+      border-bottom-right-radius: 8px;
+    }
+
+    .user::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 100%);
+      border-radius: inherit;
+      pointer-events: none;
+    }
+
+    .bot { 
+      background: rgba(255, 255, 255, 0.95);
+      color: var(--text-primary);
+      align-self: flex-start;
+      border: 1px solid rgba(255,255,255,0.2);
+      backdrop-filter: blur(10px);
+      border-bottom-left-radius: 8px;
+    }
+
+    .bot strong {
+      color: var(--text-secondary);
+    }
+
+    .typing {
+      background: rgba(255, 255, 255, 0.9);
+      color: var(--text-secondary);
+      align-self: flex-start;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border: 1px solid rgba(255,255,255,0.2);
+      backdrop-filter: blur(10px);
+      max-width: 120px;
+    }
+
+    .typing-dots {
+      display: flex;
+      gap: 4px;
+    }
+
+    .typing-dots span {
+      width: 8px;
+      height: 8px;
+      background: var(--text-secondary);
+      border-radius: 50%;
+      animation: typingDots 1.4s infinite ease-in-out;
+    }
+
+    .typing-dots span:nth-child(1) { animation-delay: -0.32s; }
+    .typing-dots span:nth-child(2) { animation-delay: -0.16s; }
+    .typing-dots span:nth-child(3) { animation-delay: 0s; }
+
+    @keyframes typingDots {
+      0%, 80%, 100% { transform: scale(0.8); opacity: 0.5; }
+      40% { transform: scale(1); opacity: 1; }
+    }
+
+    .input-container {
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.05); 
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    #chat-form {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      position: relative;
+    }
+
+    #question {
+      flex: 1;
+      padding: 18px 24px;
+      font-size: 16px;
+      border: 2px solid rgba(255,255,255,0.2);
+      border-radius: 25px;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      color: var(--text-primary);
+      font-family: inherit;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      outline: none;
+    }
+
+    #question::placeholder {
+      color: var(--text-secondary);
+      font-weight: 400;
+    }
+
+    #question:focus {
+      border-color: rgba(102, 126, 234, 0.5);
+      box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+      transform: translateY(-2px);
+    }
+
+    .send-button {
+      padding: 18px 24px;
+      font-size: 16px;
+      border: none;
+      background: rgb(141, 141, 73);
+      color: white;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 20px rgba(79, 172, 254, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .send-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      transition: left 0.5s;
+    }
+
+    .send-button:hover::before {
+      left: 100%;
+    }
+
+    .send-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(79, 172, 254, 0.4);
+    }
+
+    .send-button:active {
+      transform: translateY(0);
+    }
+
+    .send-button:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .feedback {
+      margin-top: 15px;
+      opacity: 0;
+      animation: fadeInUp 0.5s 0.3s forwards;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .feedback-prompt {
+      font-size: 0.9em;
+      color: var(--text-secondary);
+      margin-bottom: 12px;
+      font-weight: 500;
+    }
+
+    .feedback-buttons {
+      display: flex;
+      gap: 12px;
+    }
+
+    .feedback-btn {
+      padding: 10px 20px;
+      font-size: 14px;
+      border: 2px solid transparent;
+      background: rgba(255,255,255,0.1);
+      color: var(--text-secondary);
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      backdrop-filter: blur(5px);
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .like-btn:hover {
+      background: rgba(16, 185, 129, 0.2);
+      border-color: rgba(16, 185, 129, 0.3);
+      color: #10b981;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.2);
+    }
+
+    .dislike-btn:hover {
+      background: rgba(239, 68, 68, 0.2);
+      border-color: rgba(239, 68, 68, 0.3);
+      color: #ef4444;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(239, 68, 68, 0.2);
+    }
+
+    .feedback-btn:active {
+      transform: translateY(0);
+    }
+
+    .sales-pitch {
+      margin-top: 20px;
+      padding: 20px;
+      background: linear-gradient(135deg, rgba(79, 172, 254, 0.1) 0%, rgba(0, 242, 254, 0.1) 100%);
+      border: 1px solid rgba(79, 172, 254, 0.2);
+      border-radius: 16px;
+      backdrop-filter: blur(10px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sales-pitch::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(79, 172, 254, 0.5), transparent);
+    }
+
+    .company-header {
+      margin-bottom: 12px;
+    }
+
+    .company-header strong {
+      font-size: 1.1em;
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .company-info p {
+      color: var(--text-primary);
+      line-height: 1.6;
+      margin-bottom: 15px;
+      font-size: 0.95em;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .contact-info span {
+      font-size: 0.85em;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 500;
+    }
+
+    @media (max-width: 768px) {
+      .feedback-buttons {
+        flex-direction: column;
+      }
+      
+      .feedback-btn {
+        width: 100%;
+        justify-content: center;
+      }
+      
+      .contact-info {
+        flex-direction: column;
+      }
+    }
+
+    .welcome-message {
+      text-align: center;
+      color: rgba(255,255,255,0.8);
+      font-size: 1.1em;
+      margin: 50px 0;
+      line-height: 1.6;
+    }
+
+    .welcome-message h2 {
+      font-size: 1.8em;
+      margin-bottom: 16px;
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 700;
+    }
+
+    .quick-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+      justify-content: center;
+    }
+
+    .quick-action {
+      padding: 10px 18px;
+      background: rgba(5, 5, 5, 0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 20px;
+      color: rgba(5, 5, 5, 0.9);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 0.9em;
+      backdrop-filter: blur(5px);
+    }
+
+    .quick-action:hover {
+      background: rgba(255,255,255,0.2);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        height: 100vh;
+        border-radius: 0;
+        max-width: 100%;
+      }
+      
+      .header {
+        padding: 20px;
+      }
+      
+      .header h1 {
+        font-size: 2em;
+      }
+      
+      #chat-box {
+        padding: 20px;
+      }
+      
+      .message {
+        max-width: 85%;
+        padding: 16px 20px;
+      }
+      
+      .input-container {
+        padding: 20px;
+      }
+      
+      #question {
+        padding: 16px 20px;
+      }
+      
+      .send-button {
+        padding: 16px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="header-content">
+        <h1>Chatbot for IoT</h1>
+        <p>Companion for Internet of Things insights</p>
+      </div>
+    </div>
+
+    <div id="chat-box">
+      <div class="welcome-message">
+        <h2>Welcome to IoT Chatbot</h2>
+        <p style="color: #1a1a1a;">Ask me anything about Internet of Things!</p>
+        
+        <div class="quick-actions">
+          <div class="quick-action" onclick="sendQuickQuestion('What is IoT?')">What is IoT?</div>
+          <div class="quick-action" onclick="sendQuickQuestion('Popular IoT sensors')">IOT Sensors</div>
+          <div class="quick-action" onclick="sendQuickQuestion('Popular IoT protocols')">IoT Protocols</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="input-container">
+      <form id="chat-form">
+        <input type="text" id="question" placeholder="Ask me about IoT devices, protocols, security, or anything related..." required />
+        <button type="submit" class="send-button" id="send-btn">
+          <span>Send</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22 2L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById("chat-form");
+const input = document.getElementById("question");
+const chatBox = document.getElementById("chat-box");
+const sendBtn = document.getElementById("send-btn");
+
+let isFirstMessage = true;
+
+form.onsubmit = async (e) => {
+  e.preventDefault();
+  const question = input.value.trim();
+  if (!question) return;
+
+  if (isFirstMessage) {
+    const welcomeMsg = document.querySelector('.welcome-message');
+    if (welcomeMsg) {
+      welcomeMsg.style.animation = 'fadeOut 0.3s ease forwards';
+      setTimeout(() => welcomeMsg.remove(), 300);
+    }
+    isFirstMessage = false;
+  }
+
+  appendMessage("You", question, "user");
+  input.value = "";
+
+  showTypingIndicator();
+  sendBtn.disabled = true;
+  sendBtn.innerHTML = '<span>Sending...</span>';
+
+  try {
+    const res = await fetch("/chat", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ question })
+    });
+
+    if (!res.ok) {
+      const errText = await res.text();
+      throw new Error(`HTTP ${res.status} - ${errText}`);
+    }
+
+    const data = await res.json();
+    const answer = data.answer || data.error || "Error getting response.";
+
+    removeTypingIndicator();
+    appendMessage("BOT", answer, "bot", question);
+  } catch (err) {
+    console.error("❌ Chat error:", err);
+    removeTypingIndicator();
+    appendMessage("BOT", `Connection failed: ${err.message}. Please check if the server is running on localhost:5000.`, "bot");
+  } finally {
+    sendBtn.disabled = false;
+    sendBtn.innerHTML = `
+      <span>Send</span>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M22 2L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    `;
+  }
+};
+
+function appendMessage(sender, text, type, question = null) {
+  const messageDiv = document.createElement("div");
+  messageDiv.className = `message ${type}`;
+
+  let finalText = text;
+  if (type === "bot") {
+    const salesPitch = `
+      <div class="sales-pitch">
+        <div class="company-info">
+          <div class="company-header">
+            <strong>🚀 Gyrfalcon IntelliEdge Solutions India Pvt Ltd</strong>
+          </div>
+          <div class="contact-info">
+            <span>📧 Contact us for custom IoT solutions</span>
+            <span>🌐 Leading IoT innovation across India</span>
+          </div>
+        </div>
+      </div>
+    `;
+    finalText = text + salesPitch;
+  }
+
+  messageDiv.innerHTML = `<strong>${sender}</strong><div>${finalText}</div>`;
+
+  if (type === "bot") {
+    const feedback = document.createElement("div");
+    feedback.className = "feedback";
+    feedback.innerHTML = `
+      <div class="feedback-prompt">How was this response?</div>
+      <div class="feedback-buttons">
+        <button class="feedback-btn like-btn" onclick="sendFeedback('${encodeURIComponent(question || 'General question')}', '${encodeURIComponent(text)}', 'like', this)">
+          👍 Helpful
+        </button>
+        <button class="feedback-btn dislike-btn" onclick="sendFeedback('${encodeURIComponent(question || 'General question')}', '${encodeURIComponent(text)}', 'dislike', this)">
+          👎 Not helpful
+        </button>
+      </div>
+    `;
+    messageDiv.appendChild(feedback);
+  }
+
+  chatBox.appendChild(messageDiv);
+  chatBox.scrollTop = chatBox.scrollHeight;
+}
+
+function showTypingIndicator() {
+  const typingDiv = document.createElement("div");
+  typingDiv.className = "message typing";
+  typingDiv.id = "typing-indicator";
+  typingDiv.innerHTML = `
+    <strong>BOT</strong>
+    <div class="typing-dots">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  `;
+  chatBox.appendChild(typingDiv);
+  chatBox.scrollTop = chatBox.scrollHeight;
+}
+
+function removeTypingIndicator() {
+  const typingIndicator = document.getElementById("typing-indicator");
+  if (typingIndicator) {
+    typingIndicator.remove();
+  }
+}
+
+function sendFeedback(question, answer, feedback, btn) {
+  const decodedQuestion = decodeURIComponent(question);
+  const decodedAnswer = decodeURIComponent(answer);
+
+  fetch("/feedback", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      question: decodedQuestion,
+      answer: decodedAnswer,
+      feedback
+    })
+  })
+    .then(res => {
+      if (!res.ok) {
+        console.error("Feedback error:", res.status);
+      } else {
+        const originalText = btn.textContent;
+        btn.textContent = feedback === 'like' ? '✓ Thanks!' : '✓ Noted';
+        btn.style.background = 'rgba(16, 185, 129, 0.2)';
+        btn.style.color = '#10b981';
+        btn.disabled = true;
+
+        setTimeout(() => {
+          btn.textContent = originalText;
+          btn.style.background = '';
+          btn.style.color = '';
+          btn.disabled = false;
+        }, 2000);
+      }
+    })
+    .catch(err => {
+      console.error("Feedback request failed:", err);
+    });
+}
+
+function sendQuickQuestion(question) {
+  input.value = question;
+  form.dispatchEvent(new Event('submit'));
+}
+
+window.addEventListener('load', () => {
+  input.focus();
+});
+
+const style = document.createElement('style');
+style.textContent = `
+  @keyframes fadeOut {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(-20px); }
+  }
+`;
+document.head.appendChild(style);
+  </script>
+</body>
+</html>
