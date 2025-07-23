@@ -1,1 +1,1 @@
-# iot-chatbot
+# Iot-chatbot for iot resources
